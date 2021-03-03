@@ -1,0 +1,6 @@
+export const CLIENT_URL = '/client'
+export const HOMEPAGE_URL = '/home'
+export const LOGIN_URL = '/login'
+export const COURSE_DETAIL_URL = '/course'
+export const CART_URL = '/cart'
+export const CATEGORY_URL = '/category'

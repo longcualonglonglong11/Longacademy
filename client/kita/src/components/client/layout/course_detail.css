@@ -1,0 +1,80 @@
+.carousel {
+  /* box-sizing: border-box; */
+  position: relative;
+
+  transform-style: preserve-3d;
+  perspective: 500px;
+}
+.blocks {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  animation-name: bannerAnimation;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  /* animation: bannerAnimation 1.5s ease-in-out forwards; */
+}
+section.carousel.active .blocks{
+  animation: bannerAnimation2 0.25s ease-in-out forwards;
+  animation-delay: 1s;
+  background: url("../../../assets/client/img/banner.jpg");
+    background-attachment: fixed;
+    background-size: 100%; 
+    /* background-position: center; */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+@keyframes bannerAnimation {
+  0% {
+    transform: translateY(-10000px);
+    background: url("../../../assets/client/img/logo2.png");
+    background-attachment: fixed;
+    background-size: 100%; 
+    /* background-position: center; */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  100% {
+
+    transform: translateY(0px);
+    background: url("../../../assets/client/img/banner.jpg");
+    background-attachment: fixed;
+    background-size: 100%; 
+    /* background-position: center; */
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes bannerAnimation2 {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    background: url("../../../assets/client/img/banner.jpg");
+    background-attachment: fixed;
+    background-size: 100%; 
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-1000px);
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+
+   
+  }
+  /* 100%{
+    opacity: 1;
+    transform: translateY(0px);
+    background: url("../../../assets/client/img/banner.jpg");
+    background-attachment: fixed;
+    background-size: 100%; 
+    background-position: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  } */
+}

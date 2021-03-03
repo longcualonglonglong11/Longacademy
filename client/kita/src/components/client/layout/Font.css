@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: local('Quicksand'), url(../../../assets/client/font/Quicksand/Quicksand-Regular.ttf) format('truetype');
+  }
+  body {
+    font-family: Quicksand;
+  }
